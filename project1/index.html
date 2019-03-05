@@ -9,29 +9,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <title>CS 3300 Project 1</title>
-    <style>
-      body{
-        background-color: white;
-      }
-      #viz{
-        background-color: white;
-        width: 800px;
-      }
-      #main{
-        float:left;
-        margin-bottom: 20px;
-      }
-
-        .font {font-family: 'Roboto Mono', monospace;}
-        r {color: red;} bl {color: deepskyblue;} or {color: orange;}
-      #side{
-        min-width: 300px;
-        display:flex;
-        flex-flow: wrap;
-        justify-content: space-around;
-
-      }
-    </style>
 </head>
 <body>
     <!--navbar div-->
@@ -52,10 +29,11 @@
 
     <!--There are three divs in this side div. The three divs are the two
     snapshot graphs and the box with the explanations of our channels-->
-    <div  id = "side" >
-        <br><br>
+    <div  class = "side" >
         <div class="box" id="rockpoints"></div>
         <div class="box" id="africapoints"></div>
+    </div>
+    <div  class = "description" >
         <div class="desc" id="desc">
           <h2><gr><b>WHAT ARE WE GRAPHING?</b></gr></h2>
           <h5 class="font sp">

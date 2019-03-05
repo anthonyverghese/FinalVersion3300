@@ -161,6 +161,31 @@ d3.csv("genreSpotifyData.csv").then( function(data) {
     .style("fill", "e600e6")
     .text("Rock Snapshot");
 
+  svg.append("text")
+    .attr("x", 100 )
+    .attr("y",  44)
+    .attr("text-anchor", "left")
+    .attr("class" ,'font')
+    .style("font-size", "12px")
+    .style("fill", "blck")
+    .text("Overall high energy.");
+  svg.append("text")
+    .attr("x", 100 )
+    .attr("y",  60)
+    .attr("text-anchor", "left")
+    .attr("class" ,'font')
+    .style("font-size", "12px")
+    .style("fill", "blck")
+    .text("Energy remains high as valence");
+  svg.append("text")
+    .attr("x", 100 )
+    .attr("y",  76)
+    .attr("text-anchor", "left")
+    .attr("class" ,'font')
+    .style("font-size", "12px")
+    .style("fill", "blck")
+    .text("varies.");
+
   //Setting up scales for snapshot graph
   energyScale = d3.scaleLinear().domain([Math.round(minEnergy *10)/10,maxEnergy]).range([0, chartwidth]);
   valenceScale = d3.scaleLinear().domain([0,maxValence]).range([chartheight,0]);
@@ -205,7 +230,7 @@ d3.csv("genreSpotifyData.csv").then( function(data) {
 
   svg = d3.select("#africapoints").append("svg");
   svg.attr("width", genreWidth).attr("height", genreHeight);
-  svg.append("rect").attr("width", genreWidth).attr("height", genreHeight).style("fill", "white")
+  svg.append("rect").attr("width", genreWidth).attr("height", genreHeight).style("fill", "white");
   svg.append("text")
     .attr("x", (chartwidth/2)+80 )
     .attr("y",  20)
@@ -221,6 +246,29 @@ d3.csv("genreSpotifyData.csv").then( function(data) {
     .attr("width","75")
     .attr("class","biopic")
     .attr("xlink:href","heat.png")
+
+  //Add snapshot caption
+  svg.append("text")
+    .attr("x", 100 )
+    .attr("y",  44)
+    .attr("class" ,'font')
+    .style("font-size", "12px")
+    .style("fill", "black")
+    .text("Overall high valence and energy. ");
+  svg.append("text")
+      .attr("x", 100 )
+      .attr("y",  60)
+      .attr("class" ,'font')
+      .style("font-size", "12px")
+      .style("fill", "black")
+      .text("Valence increases with increasing ");
+      svg.append("text")
+          .attr("x", 100 )
+          .attr("y",  76)
+          .attr("class" ,'font')
+          .style("font-size", "12px")
+          .style("fill", "black")
+          .text("energy.");
 
   spotifyData = snapshot;
   margin = { "top": 100, "right": 60, "bottom": 30, "left":40};
