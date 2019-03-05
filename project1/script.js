@@ -37,7 +37,8 @@ d3.csv("genreSpotifyData.csv").then( function(data) {
   let y_axis = d3.axisLeft(valenceScale);
 
   //These are the 8 genres we are displaying. Spotify has odd playlist/genre names. We gave a color for each genre
-  let arrayOfGenres = ["00s Rock Anthems", "100% LatinX", "90's Hip-Hop Don't Stop", "African Heat", "Alternative 00s", "Country's Greatest Hits_ The '90s", "Pop Royalty", "RapCaviar"]
+  let arrayOfGenres = ["00s Rock Anthems", "100% LatinX", "90's Hip-Hop Don't Stop",
+   "African Heat", "Alternative 00s", "Country's Greatest Hits_ The '90s", "Pop Royalty", "RapCaviar"];
   const genreScale = d3.scaleOrdinal()
     .domain(arrayOfGenres)
     .range(["#e600e6", "#ff7e28", "#F4B400", "#DB4437", "#4285F4", "Teal", "HotPink", "#0F9D58"]);           //change colors here
@@ -84,7 +85,7 @@ d3.csv("genreSpotifyData.csv").then( function(data) {
     .attr("y",  margin.top + 10)
     .attr("text-anchor", "middle")
     .style("font-size", "15px")
-    .style("fill", "#1db954")
+    .style("fill", "#1db954");
 
   //This link (https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e) helped me with
   //making axis titles
@@ -110,10 +111,12 @@ d3.csv("genreSpotifyData.csv").then( function(data) {
     .attr("class","title")
     .text("Valence");
 
-  svg.append("g").attr("class","axiss").style("stroke", "#1db954").style("fill", "#1db954").attr("transform","translate(0 , "
-   +(chartHeight + margin.top)+")").call(x_axis);
-  svg.append("g").attr("class","axiss").style("stroke", "#1db954").style("fill", "#1db954").attr("transform","translate("+margin.left+ " , "
-   +(margin.top)+")").call(y_axis);
+  svg.append("g").attr("class","axiss").style("stroke", "#1db954").style("fill", "#1db954")
+    .attr("transform","translate(0 , "
+    +(chartHeight + margin.top)+")").call(x_axis);
+  svg.append("g").attr("class","axiss").style("stroke", "#1db954").style("fill", "#1db954")
+    .attr("transform","translate("+margin.left+ " , "
+    +(margin.top)+")").call(y_axis);
 
   //plot the circles in their corresponding x,y locations
   spotifyData.forEach(function(d,i) {
@@ -149,7 +152,7 @@ d3.csv("genreSpotifyData.csv").then( function(data) {
     .attr("y","10")
     .attr("width","75")
     .attr("class","biopic")
-    .attr("xlink:href","rock3.png")
+    .attr("xlink:href","rock3.png");
 
   //text in snapshot graph
   svg.append("text")
@@ -161,6 +164,7 @@ d3.csv("genreSpotifyData.csv").then( function(data) {
     .style("fill", "e600e6")
     .text("Rock Snapshot");
 
+//Snapshot caption
   svg.append("text")
     .attr("x", 100 )
     .attr("y",  44)
@@ -245,7 +249,7 @@ d3.csv("genreSpotifyData.csv").then( function(data) {
     .attr("y","10")
     .attr("width","75")
     .attr("class","biopic")
-    .attr("xlink:href","heat.png")
+    .attr("xlink:href","heat.png");
 
   //Add snapshot caption
   svg.append("text")

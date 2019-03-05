@@ -6,8 +6,13 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: white;}
+  background-color: white;
+}
 
+@font-face{
+  font-family: 'Roboto Mono', monospace;
+  src: url("RobotoMono-Regular.ttf");
+}
 .spcl {
   margin-left: 10px;
 }
@@ -77,8 +82,18 @@ gr {
     margin-right: 30px;
   }
 
-    .font {font-family: 'Roboto Mono', monospace;}
-    r {color: red;} bl {color: deepskyblue;} or {color: orange;}
+  .font {
+    font-family: 'Roboto Mono', monospace;
+  }
+  r {
+    color: red;
+  }
+  bl {
+    color: deepskyblue;
+  }
+  or {
+    color: orange;
+  }
   .side{
     min-width: 300px;
     display:flex;
